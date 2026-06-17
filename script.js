@@ -55,16 +55,38 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(aboutSection);
 
+// Supabase Setup
+const SUPABASE_URL = 'https://icvfsotopesbjenfavws.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_uESOnu4q5dGfG02nI2qa8A_OlwimYOY';
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
 // Contact form
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
   const btn = this.querySelector('.btn');
   const orig = btn.textContent;
-  btn.textContent = 'Message Sent!';
-  btn.style.background = '#27ae60';
+
+  const formData = {
+    name: this.querySelectorAll('input')[0].value,
+    email: this.querySelectorAll('input')[1].value,
+    phone: this.querySelectorAll('input')[2].value,
+    course: this.querySelector('select').value,
+    message: this.querySelector('textarea').value
+  };
+
+  const { error } = await supabase.from('contact_submissions').insert([formData]);
+
+  if (!error) {
+    btn.textContent = 'Message Sent!';
+    btn.style.background = '#27ae60';
+    this.reset();
+  } else {
+    btn.textContent = 'Error! Try Again';
+    btn.style.background = '#e74c3c';
+  }
+
   setTimeout(() => {
     btn.textContent = orig;
     btn.style.background = '';
-    this.reset();
   }, 3000);
 });
