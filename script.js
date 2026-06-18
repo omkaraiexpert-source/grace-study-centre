@@ -75,19 +75,24 @@ document.getElementById('contactForm').addEventListener('submit', async function
     message: this.querySelector('textarea').value
   };
 
-  const { error } = await sb.from('contact_submissions').insert([formData]);
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
 
-  if (!error) {
+  try {
+    const { data, error } = await sb.from('contact_submissions').insert([formData]).select();
+    if (error) throw error;
     btn.textContent = 'Message Sent!';
     btn.style.background = '#27ae60';
     this.reset();
-  } else {
-    btn.textContent = 'Error! Try Again';
+  } catch (err) {
+    console.error('Supabase error:', err);
+    btn.textContent = 'Error: ' + err.message;
     btn.style.background = '#e74c3c';
   }
 
   setTimeout(() => {
     btn.textContent = orig;
     btn.style.background = '';
+    btn.disabled = false;
   }, 3000);
 });
