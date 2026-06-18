@@ -6,6 +6,7 @@
   <title>Grace Study Centre</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <nav class="navbar">
@@ -15,6 +16,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#courses">Courses</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#why-us">Why Us</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -25,41 +27,42 @@
   <section id="home" class="hero">
     <div class="hero-overlay"></div>
     <div class="container hero-content">
+      <div class="hero-badge">Excellence in Education</div>
       <h1>Welcome to <span>Grace Study Centre</span></h1>
       <p>Empowering students with quality education and personalized guidance to achieve academic excellence.</p>
-      <a href="#contact" class="btn">Get Started</a>
-    </div>
-  </section>
-
-  <section id="about" class="about">
-    <div class="container">
-      <h2 class="section-title">About Us</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p>At Grace Study Centre, we believe every student has the potential to excel. Our mission is to provide a nurturing learning environment that fosters academic growth, critical thinking, and character development.</p>
-          <p>With experienced faculty, comprehensive study materials, and a student-centric approach, we have been helping students achieve their academic goals for over a decade.</p>
-          <div class="stats">
-            <div class="stat"><span class="num" data-target="500">0</span><span>+</span><p>Students</p></div>
-            <div class="stat"><span class="num" data-target="15">0</span><span>+</span><p>Teachers</p></div>
-            <div class="stat"><span class="num" data-target="10">0</span><span>+</span><p>Years</p></div>
-          </div>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-primary">Enroll Now</a>
+        <a href="#courses" class="btn btn-secondary">Our Courses</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="num" data-target="500">0</span><span>+</span>
+          <p>Students</p>
         </div>
-        <div class="about-image">
-          <img src="award-ceremony.jpg" alt="Grace Study Centre Award Ceremony" style="width:100%;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,0.15);">
+        <div class="hero-stat">
+          <span class="num" data-target="15">0</span><span>+</span>
+          <p>Teachers</p>
+        </div>
+        <div class="hero-stat">
+          <span class="num" data-target="10">0</span><span>+</span>
+          <p>Years</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="gallery">
+  <section id="about" class="about">
     <div class="container">
-      <h2 class="section-title">Our Activities</h2>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="students-activity.jpg" alt="Students Activity">
+      <div class="about-content">
+        <div class="about-text">
+          <div class="section-badge">About Us</div>
+          <h2>Shaping Futures Through Education</h2>
+          <p>At Grace Study Centre, we believe every student has the potential to excel. Our mission is to provide a nurturing learning environment that fosters academic growth, critical thinking, and character development.</p>
+          <p>With experienced faculty, comprehensive study materials, and a student-centric approach, we have been helping students achieve their academic goals for over a decade.</p>
+          <a href="#contact" class="btn btn-primary">Learn More</a>
         </div>
-        <div class="gallery-item">
-          <img src="award-ceremony.jpg" alt="Award Ceremony">
+        <div class="about-image">
+          <img src="award-ceremony.jpg" alt="Grace Study Centre">
         </div>
       </div>
     </div>
@@ -67,35 +70,36 @@
 
   <section id="courses" class="courses">
     <div class="container">
-      <h2 class="section-title">Our Courses</h2>
+      <div class="section-badge light">Our Programs</div>
+      <h2 class="section-title">What We Offer</h2>
       <div class="course-grid">
         <div class="course-card">
-          <i class="fas fa-calculator"></i>
+          <div class="course-icon"><i class="fas fa-calculator"></i></div>
           <h3>Mathematics</h3>
           <p>From basics to advanced: Algebra, Geometry, Calculus & more for all grades.</p>
         </div>
         <div class="course-card">
-          <i class="fas fa-flask"></i>
+          <div class="course-icon"><i class="fas fa-flask"></i></div>
           <h3>Science</h3>
           <p>Physics, Chemistry & Biology with practical experiments and conceptual clarity.</p>
         </div>
         <div class="course-card">
-          <i class="fas fa-language"></i>
+          <div class="course-icon"><i class="fas fa-language"></i></div>
           <h3>English</h3>
           <p>Grammar, literature, writing skills & spoken English for effective communication.</p>
         </div>
         <div class="course-card">
-          <i class="fas fa-laptop-code"></i>
+          <div class="course-icon"><i class="fas fa-laptop-code"></i></div>
           <h3>Computer Science</h3>
           <p>Programming, web development & foundational IT skills for the digital age.</p>
         </div>
         <div class="course-card">
-          <i class="fas fa-pencil-alt"></i>
+          <div class="course-icon"><i class="fas fa-pencil-alt"></i></div>
           <h3>Test Prep</h3>
           <p>Board exam preparation, competitive exams & entrance test coaching.</p>
         </div>
         <div class="course-card">
-          <i class="fas fa-child"></i>
+          <div class="course-icon"><i class="fas fa-child"></i></div>
           <h3>Early Learning</h3>
           <p>Foundational literacy & numeracy programs for young learners (Grades 1-5).</p>
         </div>
@@ -103,37 +107,62 @@
     </div>
   </section>
 
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <div class="section-badge">Our Activities</div>
+      <h2 class="section-title">Student Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item large">
+          <img src="students-activity.jpg" alt="Students Activity">
+        </div>
+        <div class="gallery-item">
+          <img src="award-ceremony.jpg" alt="Award Ceremony">
+        </div>
+        <div class="gallery-item">
+          <img src="photo3.jpg" alt="Student Work">
+        </div>
+        <div class="gallery-item">
+          <img src="photo4.jpg" alt="Classroom">
+        </div>
+        <div class="gallery-item">
+          <img src="photo5.jpg" alt="Event">
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="why-us" class="why-us">
     <div class="container">
-      <h2 class="section-title">Why Choose Us?</h2>
+      <div class="section-badge">Why Choose Us</div>
+      <h2 class="section-title">What Makes Us Different</h2>
       <div class="features">
         <div class="feature">
-          <i class="fas fa-user-tie"></i>
+          <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
           <h3>Expert Faculty</h3>
           <p>Qualified and experienced teachers dedicated to student success.</p>
         </div>
         <div class="feature">
-          <i class="fas fa-users"></i>
+          <div class="feature-icon"><i class="fas fa-users"></i></div>
           <h3>Small Batches</h3>
           <p>Personalized attention with limited students per batch.</p>
         </div>
         <div class="feature">
-          <i class="fas fa-clock"></i>
+          <div class="feature-icon"><i class="fas fa-clock"></i></div>
           <h3>Flexible Timings</h3>
           <p>Morning, evening & weekend batches to suit every schedule.</p>
         </div>
         <div class="feature">
-          <i class="fas fa-chart-line"></i>
+          <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
           <h3>Regular Assessments</h3>
           <p>Weekly tests & progress tracking to ensure continuous improvement.</p>
         </div>
         <div class="feature">
-          <i class="fas fa-file-alt"></i>
+          <div class="feature-icon"><i class="fas fa-file-alt"></i></div>
           <h3>Study Materials</h3>
           <p>Well-researched notes, worksheets & practice papers provided.</p>
         </div>
         <div class="feature">
-          <i class="fas fa-hand-holding-heart"></i>
+          <div class="feature-icon"><i class="fas fa-hand-holding-heart"></i></div>
           <h3>Mentorship</h3>
           <p>One-on-one mentoring and career guidance for every student.</p>
         </div>
@@ -143,6 +172,7 @@
 
   <section id="contact" class="contact">
     <div class="container">
+      <div class="section-badge">Get In Touch</div>
       <h2 class="section-title">Contact Us</h2>
       <div class="contact-content">
         <div class="contact-info">
@@ -177,7 +207,7 @@
             <option>Early Learning</option>
           </select>
           <textarea rows="4" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
+          <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
       </div>
     </div>
@@ -188,7 +218,13 @@
       <div class="footer-content">
         <div class="footer-about">
           <h3><i class="fas fa-graduation-cap"></i> Grace Study Centre</h3>
-          <p>Shaping futures through quality education.</p>
+          <p>Shaping futures through quality education. Join us and unlock your potential.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
         </div>
         <div class="footer-links">
           <h4>Quick Links</h4>
@@ -199,14 +235,14 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
-        <div class="footer-social">
-          <h4>Follow Us</h4>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-          </div>
+        <div class="footer-links">
+          <h4>Courses</h4>
+          <ul>
+            <li><a href="#courses">Mathematics</a></li>
+            <li><a href="#courses">Science</a></li>
+            <li><a href="#courses">English</a></li>
+            <li><a href="#courses">Computer Science</a></li>
+          </ul>
         </div>
       </div>
       <div class="footer-bottom">
