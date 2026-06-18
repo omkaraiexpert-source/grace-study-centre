@@ -58,7 +58,8 @@ observer.observe(aboutSection);
 // Supabase Setup
 const SUPABASE_URL = 'https://icvfsotopesbjenfavws.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_uESOnu4q5dGfG02nI2qa8A_OlwimYOY';
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+const { createClient } = supabase;
+const sb = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 // Contact form
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
@@ -74,7 +75,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     message: this.querySelector('textarea').value
   };
 
-  const { error } = await supabase.from('contact_submissions').insert([formData]);
+  const { error } = await sb.from('contact_submissions').insert([formData]);
 
   if (!error) {
     btn.textContent = 'Message Sent!';
